@@ -2,6 +2,7 @@ package com.act
 
 import android.content.res.Configuration
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.animateColorAsState
@@ -9,20 +10,31 @@ import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsHoveredAsState
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
 import com.example.com.myapplication.R
 
 
@@ -60,13 +72,25 @@ fun Conversation(messages: List<Message>) {
         }
     }
 }
-
 @Composable
 fun MessageCard(msg: Message) {
     val openDialog = remember { mutableStateOf(false) }
     var isExpanded by remember { mutableStateOf(false) }
     val surfaceColor by animateColorAsState(
         targetValue = if (isExpanded) Color(0xFFCCCCCC) else MaterialTheme.colors.surface // 为了适配不同的模式，你可能不能直接将颜色定义在这里，而是在 Theme.kt 中定义不同主题的颜色，这里作为演示就直接定义了
+    )
+    AsyncImage(
+        model = ImageRequest.Builder(LocalContext.current)
+            .size(500,200)
+            .data("https://pic-go-bed.oss-cn-beijing.aliyuncs.com/img/20220316151929.png")
+            .crossfade(true)
+            .build(),
+        contentDescription = stringResource(R.string.app_name),
+        placeholder = painterResource(id = R.drawable.aaa),
+        error = painterResource(id = R.drawable.aaa),
+        onSuccess = {
+            Log.d("ccc", "success")
+        }
     )
     Surface(
         shape = MaterialTheme.shapes.medium,
@@ -98,12 +122,15 @@ fun MessageCard(msg: Message) {
                     style = MaterialTheme.typography.subtitle2
                 )
                 Spacer(Modifier.padding(vertical = 4.dp))
-                Text(
-                    text = msg.body,
-                    style = MaterialTheme.typography.body2,
-                    maxLines = if (isExpanded) Int.MAX_VALUE else 1,
-                    modifier = Modifier.animateContentSize()
-                )
+//                Text(
+//                    text = msg.body,
+//                    style = MaterialTheme.typography.body2,
+//                    maxLines = if (isExpanded) Int.MAX_VALUE else 1,
+//                    modifier = Modifier.animateContentSize()
+//                )
+
+
+
             }
         }
     }
@@ -171,3 +198,4 @@ fun alter(openDialog: MutableState<Boolean>) {
         )
     }
 }
+
