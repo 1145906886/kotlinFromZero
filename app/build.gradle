@@ -49,6 +49,7 @@ dependencies {
     implementation 'androidx.work:work-runtime-ktx:2.7.1'
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
     implementation 'io.reactivex.rxjava3:rxjava:3.1.3'
+
     //XPopup
     implementation 'com.github.li-xiaojun:XPopup:2.8.14'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
@@ -74,4 +75,116 @@ dependencies {
     implementation 'io.coil-kt:coil-compose:2.2.2'
     // UI Tests
     androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.3.0'
+    //悬浮框
+    implementation 'com.github.princekin-f:EasyFloat:2.0.4'
+    //图表
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    //带伸缩的文本显示
+    implementation 'com.github.MZCretin:ExpandableTextView:v1.6.1-x'
+    //日期选择控件
+    implementation 'com.github.gzu-liyujiang.AndroidPicker:WheelPicker:4.1.9'
+    //lottie
+    implementation 'com.airbnb.android:lottie:5.2.0'
+    //评分星星
+    implementation 'me.zhanghai.android.materialratingbar:library:1.4.0'
+    //图片压缩库
+    implementation 'top.zibin:Luban:1.1.8'
+    //Web
+    implementation 'com.github.wendux:DSBridge-Android:3.0.0'
+    //版本更新
+    implementation 'com.github.azhon:AppUpdate:4.2.2'
+    //图片预览
+    implementation 'com.github.mikaelzero.mojito:mojito:1.8.7'
+    implementation 'com.github.mikaelzero.mojito:SketchImageViewLoader:1.8.7'
+    implementation 'com.github.mikaelzero.mojito:GlideImageLoader:1.8.7'
+    //图片选择
+    implementation 'io.github.lucksiege:pictureselector:v3.10.5'
+    implementation 'io.github.lucksiege:ucrop:v3.10.2'
+    //banner
+    implementation 'com.github.zhpanvip:bannerviewpager:3.5.6'
+    //XXPermissions
+    implementation 'com.github.getActivity:XXPermissions:18.2'
+    //titleBar
+    implementation 'com.github.getActivity:TitleBar:9.6'
+    //底部导航
+    implementation 'me.majiajie:pager-bottom-tab-strip:2.4.0'
+    //腾讯mmkv
+    implementation 'com.tencent:mmkv:1.2.13'
+    //logger
+    implementation 'com.orhanobut:logger:2.2.0'
+    //toast
+    implementation 'com.github.getActivity:ToastUtils:10.3'
+    //gson
+    implementation 'com.google.code.gson:gson:2.9.0'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    kapt 'com.github.bumptech.glide:compiler:4.13.2'
+    //rxHttp
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    implementation "com.github.liujingxing.rxhttp:rxhttp:2.9.1"
+    kapt "com.github.liujingxing.rxhttp:rxhttp-compiler:2.9.1"
+    //XPopup
+    implementation 'com.github.li-xiaojun:XPopup:2.9.19'
+    //侧滑RecyclerView
+    implementation 'com.github.aitsuki:SwipeMenuRecyclerView:2.1.1'
+    //liveEventBus
+    implementation 'com.jeremyliao:live-event-bus-x:1.7.3'
+    //通用recyclerViewAdapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.7'
+    //loadSir状态管理
+    implementation 'com.github.Zhao-Yan-Yan:MultiStatePage:2.0.1'
+    //刷新框架
+    implementation 'io.github.scwang90:refresh-layout-kernel:2.0.5'
+    implementation 'io.github.scwang90:refresh-header-classics:2.0.5'
+    //状态栏沉浸
+    implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+    implementation 'com.geyifeng.immersionbar:immersionbar-ktx:3.2.2'
+    //通过标签直接生成shape，无需再写shape.xml
+    implementation 'com.github.JavaNoober.BackgroundLibrary:libraryx:1.7.4'
+    //腾讯多渠道打包
+    implementation 'com.tencent.vasdolly:helper:3.0.4'
+    //路由
+    implementation "com.alibaba:arouter-api:1.5.2"
+    kapt "com.alibaba:arouter-compiler:1.5.2"
+    // materialDialog
+    implementation 'com.afollestad.material-dialogs:datetime:3.3.0'
+    //crash
+    implementation 'cat.ereza:customactivityoncrash:2.4.0'
+    //multidex
+    implementation 'androidx.multidex:multidex:2.0.1'
+    //viewBindingKtx
+    implementation 'com.github.DylanCaiCoding.ViewBindingKTX:viewbinding-ktx:2.1.0'
+    implementation 'com.github.DylanCaiCoding.ViewBindingKTX:viewbinding-nonreflection-ktx:2.1.0'
+    implementation 'com.github.DylanCaiCoding.ViewBindingKTX:viewbinding-base:2.1.0'
+    implementation 'com.github.DylanCaiCoding.ViewBindingKTX:viewbinding-brvah:2.1.0'
+    //rxBinding
+    implementation 'com.jakewharton.rxbinding4:rxbinding-core:4.0.0'
+    //room
+    implementation 'androidx.room:room-ktx:2.4.3'
+    implementation 'androidx.room:room-runtime:2.4.3'
+    kapt 'androidx.room:room-compiler:2.4.3'
+    implementation 'androidx.work:work-runtime-ktx:2.7.1'
+    //jetpack-lifecycle
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    //noinspection LifecycleAnnotationProcessorWithJava8
+    kapt 'androidx.lifecycle:lifecycle-compiler:2.4.1'
+
+    //阿里推送
+    api 'com.aliyun.ams:alicloud-android-push:3.8.6'
+    //辅助通道基础依赖
+    api 'com.aliyun.ams:alicloud-android-third-push:3.8.6'
+    //华为依赖
+    api 'com.aliyun.ams:alicloud-android-third-push-huawei:3.8.6'
+    //小米依赖
+    api 'com.aliyun.ams:alicloud-android-third-push-xiaomi:3.8.6'
+    //OPPO依赖
+    api 'com.aliyun.ams:alicloud-android-third-push-oppo:3.8.6'
+    //vivo依赖
+    api 'com.aliyun.ams:alicloud-android-third-push-vivo:3.8.6'
+    //荣耀
+    api 'com.aliyun.ams:alicloud-android-third-push-honor:3.8.6'
+    //阿里热修复
+    api 'com.aliyun.ams:alicloud-android-hotfix:3.3.8'
 }
